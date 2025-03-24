@@ -1,0 +1,191 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;  /* Asegura que el body ocupe todo el alto */
+}
+
+body{
+    background-image: url("/vecteezy_ai-generated-large-crowd-applauding-at-a-popular-music_38995623.jpg");
+    background-size: cover;
+    background-position: center center;  /* Centra la imagen */
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Estructura del menú */
+.menu {
+    background-color: black; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 40px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para el título */
+h1 {
+    font-size: 2em;
+    color: #FF6347; /* Rojo tomate */
+    margin-bottom: 20px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+/* Estilo para los párrafos */
+.relleno p {
+    font-size: 1.2em;
+    color: chocolate;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Botones del menú */
+.opcion {
+    background-color: #FF4500; /* Verde suave */
+    color: beige;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 35%;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Hover y efecto activo en los botones */
+.opcion:hover {
+    background-color: #FF6347; /* Verde ligeramente más oscuro */
+    transform: translateY(-3px); /* Efecto de levantamiento */
+}
+
+.opcion:active {
+    background-color: #388e3c; /* Verde más oscuro */
+    transform: translateY(2px); /* Efecto de presión */
+}
+.objeto img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+.objeto:hover{
+    transform: translateY(-3px);
+}
+.escenario{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    padding: 1% 6%;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 90%;
+}
+.choose{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+    width: 100%;
+}
+.objetos{
+    display: flex;
+    gap: 10%;
+    border-bottom: #FF6347 solid 3px;
+    width: 100%;
+    justify-content: center;
+}
+.fight{
+    text-align: center;
+}
+.fight p{
+    color: white;
+    background-color:  #FF4500;
+    padding: 10% 0;
+    border-radius: 15px;
+}
+
+.resultDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.resultDiv p:hover {
+    background-color: #FF6347; /* Verde ligeramente más oscuro */
+    transform: translateY(-3px); /* Efecto de levantamiento */
+}
+.resultDiv p:active {
+    background-color: #388e3c; /* Verde más oscuro */
+    transform: translateY(2px); 
+}
+.resultDiv p:last-child{
+    width: 80%;
+}
+@keyframes rotar360Horario {
+    0% {
+        transform: rotate(0deg); /* Comienza en su posición inicial */
+    }
+    50% {
+        transform: rotate(180deg); /* Gira 180 grados */
+    }
+    100% {
+        transform: rotate(540deg); /* Gira 360 + 180 grados (invertido) */
+    }
+}
+
+@keyframes rotar360Antihorario {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-180deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+.rotarTijerasHorario {
+    animation: rotar360Horario 1s linear forwards;
+}
+
+.rotarTijerasAntihorario {
+    animation: rotar360Antihorario 1s linear;
+}
+@keyframes lanzarPapelyUser {
+    0% {
+        transform: translateX(-100px); /* Inicia en su posición original */
+    }
+    100% {
+        transform: translateX(50px); /* Mueve la imagen hacia la derecha */
+    }
+}
+
+@keyframes lanzarPapelyCpu {
+    0% {
+        transform: translateX(100px); /* Inicia en su posición original */
+    }
+    100% {
+        transform: translateX(-50px); /* Mueve la imagen hacia la izquierda */
+    }
+}
+
+.lanzarPapelyUser {
+    animation: lanzarPapelyUser 1s ease-out; /* 'forwards' mantiene la posición final */
+}
+
+.lanzarPapelyCpu {
+    animation: lanzarPapelyCpu 1s ease-out; /* 'forwards' mantiene la posición final */
+}
